@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import ClickSpark from '../components/ClickSpark';
 
 function Archive() {
   const { isDarkMode } = useTheme();
 
   return (
-    <div className={`min-h-screen w-full ${isDarkMode ? 'bg-black text-white' : 'bg-[#f0f0f0] text-black'} font-inter p-8 transition-colors duration-300`}>
+    <ClickSpark 
+      sparkColor={isDarkMode ? '#ffffff' : '#000000'}
+      sparkSize={10}
+      sparkRadius={20}
+      sparkCount={8}
+      duration={500}
+      easing="ease-out"
+    >
+      <div className={`min-h-screen w-full ${isDarkMode ? 'bg-black text-white' : 'bg-[#f0f0f0] text-black'} font-inter p-8 transition-colors duration-300`}>
       <header className="mb-12">
         <nav className="text-sm font-semibold">
           <Link to="/" className={`${isDarkMode ? 'text-white hover:text-gray-400' : 'text-black hover:text-gray-600'} transition-colors`}>
@@ -38,7 +47,8 @@ function Archive() {
           </div>
         </div>
       </main>
-    </div>
+      </div>
+    </ClickSpark>
   );
 }
 

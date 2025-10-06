@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import ClickSpark from '../components/ClickSpark';
 
 function Home() {
   const { isDarkMode, setIsDarkMode } = useTheme();
 
   return (
-    <div className={`min-h-screen w-full ${isDarkMode ? 'bg-black text-white' : 'bg-[#f0f0f0] text-black'} font-inter relative transition-colors duration-300`}>
+    <ClickSpark 
+      sparkColor={isDarkMode ? '#ffffff' : '#000000'}
+      sparkSize={10}
+      sparkRadius={20}
+      sparkCount={8}
+      duration={500}
+      easing="ease-out"
+    >
+      <div className={`min-h-screen w-full ${isDarkMode ? 'bg-black text-white' : 'bg-[#f0f0f0] text-black'} font-inter relative transition-colors duration-300`}>
       {/* Top bar with four sections */}
       <header className="w-full flex flex-col sm:flex-row justify-between items-start px-8 sm:px-12 py-10 gap-4 sm:gap-0">
         {/* 左上：名字与身份 */}
@@ -87,7 +96,8 @@ function Home() {
       <footer className={`absolute bottom-4 left-8 text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
         © 2025 Ruoxuan QI
       </footer>
-    </div>
+      </div>
+    </ClickSpark>
   );
 }
 
