@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import ClickSpark from '../components/ClickSpark';
+import Weather from '../components/Weather';
 
 function Home() {
   const { isDarkMode, setIsDarkMode } = useTheme();
@@ -27,14 +28,12 @@ function Home() {
           </span>
         </div>
 
-        {/* 中左：地点 */}
+        {/* 中左：天气信息 */}
         <div className="flex flex-col leading-[1.1] space-y-0.5">
           <span className={`font-semibold ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} text-[13px]`}>
-            Location:
+            Weather:
           </span>
-          <span className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} text-[13px]`}>
-            Putuo, Shanghai
-          </span>
+          <Weather />
         </div>
 
         {/* 中右：导航 */}
