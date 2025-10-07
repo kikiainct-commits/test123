@@ -44,7 +44,7 @@ function Home() {
           <div className={`font-semibold ${isDarkMode ? 'text-white' : 'text-gray-900'} text-[13px] space-x-2`}>
             <Link to="/" className={`${isDarkMode ? 'hover:text-gray-400' : 'hover:text-gray-600'} transition-colors`}>Index</Link>
             <span>,</span>
-            <Link to="/work" className={`${isDarkMode ? 'hover:text-gray-400' : 'hover:text-gray-600'} transition-colors`}>Work</Link>
+            <Link to="/work" className={`${isDarkMode ? 'hover:text-gray-400' : 'hover:text-gray-600'} transition-colors`}>About</Link>
             <span>,</span>
             <Link to="/archive" className={`${isDarkMode ? 'hover:text-gray-400' : 'hover:text-gray-600'} transition-colors`}>Archive</Link>
             <span>,</span>

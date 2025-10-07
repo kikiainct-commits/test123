@@ -30,10 +30,6 @@ function Work() {
 
         {/* Main content */}
         <main className="px-8 sm:px-12 pb-20">
-          {/* Page title */}
-          <h1 className={`text-6xl sm:text-7xl md:text-8xl font-playfair font-normal mb-16 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-            Work
-          </h1>
 
           {/* Project 1 - 左侧图片 + 右侧文字（像参考图片那样） */}
           <div className="mb-32 flex flex-col lg:flex-row gap-0 lg:gap-0 items-stretch min-h-screen lg:min-h-0">
@@ -51,7 +47,7 @@ function Work() {
             <div className="w-full lg:w-1/2 flex items-center justify-center lg:pl-16 mt-8 lg:mt-0">
               <div className="max-w-xl">
                 <h2 className={`text-4xl sm:text-5xl md:text-6xl font-playfair font-normal mb-8 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                  A few fun facts about me:
+                  Life Lately
                 </h2>
                 <div className={`text-base sm:text-lg leading-relaxed space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                   <p>I love to travel — and I've kept a 733-day streak on Duolingo.</p>
